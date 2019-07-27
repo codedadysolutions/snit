@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* snitappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* snitappTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -16,6 +15,26 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* snitappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* snitappTests.m */; };
+		2258567100B240F0A9C841C0 /* SegoePro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3581585FA8F4BE08AD36C46 /* SegoePro-Black.ttf */; };
+		5864303AD17441AB87B1F84F /* SegoePro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C39A98CF92C4154A815C09C /* SegoePro-BlackItalic.ttf */; };
+		E880413275B64BE5AD484D54 /* SegoePro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67972EC117B546A795AE7512 /* SegoePro-Bold.ttf */; };
+		AC8F56FD5E9B46D3AEEF31C6 /* SegoePro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4E6701536BD4EABA747852D /* SegoePro-BoldItalic.ttf */; };
+		9599FBA791FD4AF3B7A28DDB /* SegoePro-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34532C9EBBE44296B011AE1D /* SegoePro-CondBold.ttf */; };
+		B857442F1D204670A199A569 /* SegoePro-CondBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9CE919DD650477D8D99D228 /* SegoePro-CondBoldItalic.ttf */; };
+		115E7673018F4AFAA25D7C91 /* SegoePro-CondItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BC0F73C1F7848B5A31E9938 /* SegoePro-CondItalic.ttf */; };
+		9006A601C570416CA771AED1 /* SegoePro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E72792FA7F4D70B641E11B /* SegoePro-Italic.ttf */; };
+		F376CFD7DE6D42739E495255 /* SegoePro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB0708862AB04D4B8D3E3C43 /* SegoePro-Light.ttf */; };
+		222E27BCFFE049E29CCF21D8 /* SegoePro-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6392E80C89C4150A31D6AE2 /* SegoePro-LightItalic.ttf */; };
+		04015F85DB0846EAAD5E6149 /* SegoePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E2BC4A0B3CC4BA7BD578C0B /* SegoePro-Regular.ttf */; };
+		5A614275CFFD4A1B9D5162D9 /* SegoePro-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 249AB51EF6D346769ADE8F11 /* SegoePro-Semibold.ttf */; };
+		7C11B9FDBEBA4BEFA7A81432 /* SegoePro-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30B74064F55044FFBE9168FD /* SegoePro-SemiboldItalic.ttf */; };
+		2EE4FFF5262C465382A5D6C3 /* SegoePro-Semilight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5035E4F1CEF043308F0699E5 /* SegoePro-Semilight.ttf */; };
+		A0082E433C05443389107946 /* SegoePro-SemilightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29DDFC4D82BE4D92877532F5 /* SegoePro-SemilightItalic.ttf */; };
+		AEC92746191942C48920286A /* SegoeProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24506F74805043C9A93288A5 /* SegoeProDisplay-Bold.ttf */; };
+		2FF29904968E406B9FF45024 /* SegoeProDisplay-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 939AB62B96BC4B0E87E8CCD8 /* SegoeProDisplay-Light.ttf */; };
+		312FAC7124404E199D839EDF /* SegoeProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 862C43032E25407891F2D912 /* SegoeProDisplay-Regular.ttf */; };
+		C5D75F28E4F142BFAEB0162E /* SegoeProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89C7EFFE2C0846F7A35A77AD /* SegoeProDisplay-Semibold.ttf */; };
+		416C4C519764464A87596F44 /* SegoeProDisplay-Semilight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 535FA9243948427A9D4C82F9 /* SegoeProDisplay-Semilight.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +70,26 @@
 		2D02E4901E0B4A5D006451C7 /* snitapp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "snitapp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F3581585FA8F4BE08AD36C46 /* SegoePro-Black.ttf */ = {isa = PBXFileReference; name = "SegoePro-Black.ttf"; path = "../assets/fonts/SegoePro-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7C39A98CF92C4154A815C09C /* SegoePro-BlackItalic.ttf */ = {isa = PBXFileReference; name = "SegoePro-BlackItalic.ttf"; path = "../assets/fonts/SegoePro-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		67972EC117B546A795AE7512 /* SegoePro-Bold.ttf */ = {isa = PBXFileReference; name = "SegoePro-Bold.ttf"; path = "../assets/fonts/SegoePro-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D4E6701536BD4EABA747852D /* SegoePro-BoldItalic.ttf */ = {isa = PBXFileReference; name = "SegoePro-BoldItalic.ttf"; path = "../assets/fonts/SegoePro-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		34532C9EBBE44296B011AE1D /* SegoePro-CondBold.ttf */ = {isa = PBXFileReference; name = "SegoePro-CondBold.ttf"; path = "../assets/fonts/SegoePro-CondBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C9CE919DD650477D8D99D228 /* SegoePro-CondBoldItalic.ttf */ = {isa = PBXFileReference; name = "SegoePro-CondBoldItalic.ttf"; path = "../assets/fonts/SegoePro-CondBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4BC0F73C1F7848B5A31E9938 /* SegoePro-CondItalic.ttf */ = {isa = PBXFileReference; name = "SegoePro-CondItalic.ttf"; path = "../assets/fonts/SegoePro-CondItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E7E72792FA7F4D70B641E11B /* SegoePro-Italic.ttf */ = {isa = PBXFileReference; name = "SegoePro-Italic.ttf"; path = "../assets/fonts/SegoePro-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EB0708862AB04D4B8D3E3C43 /* SegoePro-Light.ttf */ = {isa = PBXFileReference; name = "SegoePro-Light.ttf"; path = "../assets/fonts/SegoePro-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F6392E80C89C4150A31D6AE2 /* SegoePro-LightItalic.ttf */ = {isa = PBXFileReference; name = "SegoePro-LightItalic.ttf"; path = "../assets/fonts/SegoePro-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9E2BC4A0B3CC4BA7BD578C0B /* SegoePro-Regular.ttf */ = {isa = PBXFileReference; name = "SegoePro-Regular.ttf"; path = "../assets/fonts/SegoePro-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		249AB51EF6D346769ADE8F11 /* SegoePro-Semibold.ttf */ = {isa = PBXFileReference; name = "SegoePro-Semibold.ttf"; path = "../assets/fonts/SegoePro-Semibold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		30B74064F55044FFBE9168FD /* SegoePro-SemiboldItalic.ttf */ = {isa = PBXFileReference; name = "SegoePro-SemiboldItalic.ttf"; path = "../assets/fonts/SegoePro-SemiboldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5035E4F1CEF043308F0699E5 /* SegoePro-Semilight.ttf */ = {isa = PBXFileReference; name = "SegoePro-Semilight.ttf"; path = "../assets/fonts/SegoePro-Semilight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		29DDFC4D82BE4D92877532F5 /* SegoePro-SemilightItalic.ttf */ = {isa = PBXFileReference; name = "SegoePro-SemilightItalic.ttf"; path = "../assets/fonts/SegoePro-SemilightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		24506F74805043C9A93288A5 /* SegoeProDisplay-Bold.ttf */ = {isa = PBXFileReference; name = "SegoeProDisplay-Bold.ttf"; path = "../assets/fonts/SegoeProDisplay-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		939AB62B96BC4B0E87E8CCD8 /* SegoeProDisplay-Light.ttf */ = {isa = PBXFileReference; name = "SegoeProDisplay-Light.ttf"; path = "../assets/fonts/SegoeProDisplay-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		862C43032E25407891F2D912 /* SegoeProDisplay-Regular.ttf */ = {isa = PBXFileReference; name = "SegoeProDisplay-Regular.ttf"; path = "../assets/fonts/SegoeProDisplay-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		89C7EFFE2C0846F7A35A77AD /* SegoeProDisplay-Semibold.ttf */ = {isa = PBXFileReference; name = "SegoeProDisplay-Semibold.ttf"; path = "../assets/fonts/SegoeProDisplay-Semibold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		535FA9243948427A9D4C82F9 /* SegoeProDisplay-Semilight.ttf */ = {isa = PBXFileReference; name = "SegoeProDisplay-Semilight.ttf"; path = "../assets/fonts/SegoeProDisplay-Semilight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +179,7 @@
 				00E356EF1AD99517003FC87E /* snitappTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				5B5F3A0CB74E423E82CB3605 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -156,6 +196,34 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		5B5F3A0CB74E423E82CB3605 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				F3581585FA8F4BE08AD36C46 /* SegoePro-Black.ttf */,
+				7C39A98CF92C4154A815C09C /* SegoePro-BlackItalic.ttf */,
+				67972EC117B546A795AE7512 /* SegoePro-Bold.ttf */,
+				D4E6701536BD4EABA747852D /* SegoePro-BoldItalic.ttf */,
+				34532C9EBBE44296B011AE1D /* SegoePro-CondBold.ttf */,
+				C9CE919DD650477D8D99D228 /* SegoePro-CondBoldItalic.ttf */,
+				4BC0F73C1F7848B5A31E9938 /* SegoePro-CondItalic.ttf */,
+				E7E72792FA7F4D70B641E11B /* SegoePro-Italic.ttf */,
+				EB0708862AB04D4B8D3E3C43 /* SegoePro-Light.ttf */,
+				F6392E80C89C4150A31D6AE2 /* SegoePro-LightItalic.ttf */,
+				9E2BC4A0B3CC4BA7BD578C0B /* SegoePro-Regular.ttf */,
+				249AB51EF6D346769ADE8F11 /* SegoePro-Semibold.ttf */,
+				30B74064F55044FFBE9168FD /* SegoePro-SemiboldItalic.ttf */,
+				5035E4F1CEF043308F0699E5 /* SegoePro-Semilight.ttf */,
+				29DDFC4D82BE4D92877532F5 /* SegoePro-SemilightItalic.ttf */,
+				24506F74805043C9A93288A5 /* SegoeProDisplay-Bold.ttf */,
+				939AB62B96BC4B0E87E8CCD8 /* SegoeProDisplay-Light.ttf */,
+				862C43032E25407891F2D912 /* SegoeProDisplay-Regular.ttf */,
+				89C7EFFE2C0846F7A35A77AD /* SegoeProDisplay-Semibold.ttf */,
+				535FA9243948427A9D4C82F9 /* SegoeProDisplay-Semilight.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -240,7 +308,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -293,6 +361,26 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				2258567100B240F0A9C841C0 /* SegoePro-Black.ttf in Resources */,
+				5864303AD17441AB87B1F84F /* SegoePro-BlackItalic.ttf in Resources */,
+				E880413275B64BE5AD484D54 /* SegoePro-Bold.ttf in Resources */,
+				AC8F56FD5E9B46D3AEEF31C6 /* SegoePro-BoldItalic.ttf in Resources */,
+				9599FBA791FD4AF3B7A28DDB /* SegoePro-CondBold.ttf in Resources */,
+				B857442F1D204670A199A569 /* SegoePro-CondBoldItalic.ttf in Resources */,
+				115E7673018F4AFAA25D7C91 /* SegoePro-CondItalic.ttf in Resources */,
+				9006A601C570416CA771AED1 /* SegoePro-Italic.ttf in Resources */,
+				F376CFD7DE6D42739E495255 /* SegoePro-Light.ttf in Resources */,
+				222E27BCFFE049E29CCF21D8 /* SegoePro-LightItalic.ttf in Resources */,
+				04015F85DB0846EAAD5E6149 /* SegoePro-Regular.ttf in Resources */,
+				5A614275CFFD4A1B9D5162D9 /* SegoePro-Semibold.ttf in Resources */,
+				7C11B9FDBEBA4BEFA7A81432 /* SegoePro-SemiboldItalic.ttf in Resources */,
+				2EE4FFF5262C465382A5D6C3 /* SegoePro-Semilight.ttf in Resources */,
+				A0082E433C05443389107946 /* SegoePro-SemilightItalic.ttf in Resources */,
+				AEC92746191942C48920286A /* SegoeProDisplay-Bold.ttf in Resources */,
+				2FF29904968E406B9FF45024 /* SegoeProDisplay-Light.ttf in Resources */,
+				312FAC7124404E199D839EDF /* SegoeProDisplay-Regular.ttf in Resources */,
+				C5D75F28E4F142BFAEB0162E /* SegoeProDisplay-Semibold.ttf in Resources */,
+				416C4C519764464A87596F44 /* SegoeProDisplay-Semilight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

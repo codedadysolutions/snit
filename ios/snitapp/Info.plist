@@ -38,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -53,5 +53,28 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SegoePro-Black.ttf</string>
+		<string>SegoePro-BlackItalic.ttf</string>
+		<string>SegoePro-Bold.ttf</string>
+		<string>SegoePro-BoldItalic.ttf</string>
+		<string>SegoePro-CondBold.ttf</string>
+		<string>SegoePro-CondBoldItalic.ttf</string>
+		<string>SegoePro-CondItalic.ttf</string>
+		<string>SegoePro-Italic.ttf</string>
+		<string>SegoePro-Light.ttf</string>
+		<string>SegoePro-LightItalic.ttf</string>
+		<string>SegoePro-Regular.ttf</string>
+		<string>SegoePro-Semibold.ttf</string>
+		<string>SegoePro-SemiboldItalic.ttf</string>
+		<string>SegoePro-Semilight.ttf</string>
+		<string>SegoePro-SemilightItalic.ttf</string>
+		<string>SegoeProDisplay-Bold.ttf</string>
+		<string>SegoeProDisplay-Light.ttf</string>
+		<string>SegoeProDisplay-Regular.ttf</string>
+		<string>SegoeProDisplay-Semibold.ttf</string>
+		<string>SegoeProDisplay-Semilight.ttf</string>
+	</array>
 </dict>
 </plist>
