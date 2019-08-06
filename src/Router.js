@@ -3,6 +3,11 @@ import { StyleSheet, Image, Text, View, Dimensions, AsyncStorage} from 'react-na
 import { createAppContainer,createStackNavigator } from "react-navigation";
 import Splash from './views/Splash'
 import Login from './views/Login'
+import Home from './views/Home'
+import Notification from './views/Notification'
+import LeaveRequest from './views/LeaveRequest'
+import Subs from './views/Subs'
+import History from './views/History'
 
 
 const AppNavigator = createStackNavigator({
@@ -14,6 +19,30 @@ const AppNavigator = createStackNavigator({
       },
       Login: {
         screen: Login,
+        navigationOptions: () => ({
+            header: null
+          }),
+      },
+      Home: {
+        screen: Home,
+        navigationOptions: () => ({
+            header: null
+          }),
+      },
+      Notification: {
+        screen: Notification,
+        navigationOptions: () => ({
+            header: null
+          }),
+      },
+    LeaveRequest: {
+        screen: LeaveRequest,
+        navigationOptions: () => ({
+            header: null
+          }),
+      },
+      History: {
+        screen: History,
         navigationOptions: () => ({
             header: null
           }),

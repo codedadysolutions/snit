@@ -1,6 +1,6 @@
 export default {
-    FONT_FAMILY_LIGHT:"SegeoPro-Light",
-    FONT_FAMILY_REG:"SegeoPro-Regular",
-    FONT_FAMILY_BOLD:"SegeoPro-Bold",
-    FONT_FAMILY_SEMI:"SegeoPro-Semibold"
+    FONT_FAMILY_LIGHT:"SegoePro-Light",
+    FONT_FAMILY_REG:"SegoePro-Regular",
+    FONT_FAMILY_BOLD:"SegoePro-Bold",
+    FONT_FAMILY_SEMI:"SegoePro-Semibold"
    };
