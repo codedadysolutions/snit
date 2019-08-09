@@ -8,6 +8,7 @@ import Notification from './views/Notification'
 import LeaveRequest from './views/LeaveRequest'
 import Subs from './views/Subs'
 import History from './views/History'
+import Chat from './views/Chat'
 
 
 const AppNavigator = createStackNavigator({
@@ -43,6 +44,12 @@ const AppNavigator = createStackNavigator({
       },
       History: {
         screen: History,
+        navigationOptions: () => ({
+            header: null
+          }),
+      },
+      Chat: {
+        screen: Chat,
         navigationOptions: () => ({
             header: null
           }),

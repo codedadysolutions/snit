@@ -31,7 +31,10 @@ export default class Home extends Component {
                     <Icon name='bell-ring' size={20} color='#3A4277'/>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=>this.props.navigation.navigate('History')}  style={{width: 50, justifyContent:"center", alignItems: 'center'}}>
-                    <Icon name='account' size={20} color='#3A4277'/>
+                    <Icon name='account' size={22} color='#3A4277'/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={()=>this.props.navigation.navigate('Chat')}  style={{width: 50, justifyContent:"center", alignItems: 'center'}}>
+                    <Icon name='android-messages' size={20} color='#3A4277'/>
                 </TouchableOpacity>
             </View>
         </View>
