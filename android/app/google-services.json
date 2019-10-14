@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "252439048738",
+    "firebase_url": "https://snit-4cc44.firebaseio.com",
+    "project_id": "snit-4cc44",
+    "storage_bucket": "snit-4cc44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252439048738:android:c105d2da4b648366a2d07b",
+        "android_client_info": {
+          "package_name": "com.snitapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "252439048738-h4c7jbqrr86cvrg2ki3j96vd3ii52ndh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCExXFVdr3nJzE0Yzf8C9S504DTrQ0RYfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "252439048738-h4c7jbqrr86cvrg2ki3j96vd3ii52ndh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

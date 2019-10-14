@@ -1,13 +1,102 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Dimensions, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, ScrollView, TouchableOpacity, FlatList, ActivityIndicator, AsyncStorage } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import Icon2 from 'react-native-vector-icons/MaterialIcons'
 import Font from '../font'
 import MessageComp from '../Comp/messageComp'
+import axios from 'axios'
+import baseurl from '../data'
 
 const{width,height}=Dimensions.get('window')
 
 export default class Chat extends Component {
+
+    state={
+        cData:[], 
+        token:''
+    }
+    
+
+    componentDidMount(){
+        this._retrieveData()
+    }
+
+
+    _retrieveData = async () => {
+        try {
+            const value = await AsyncStorage.getItem('@token');
+            if (value !== null) {
+            // We have data!!
+            this.setState({token: value }, ()=>{
+                this.getAdminMessages()
+            })
+            console.log("GOT IT ",value);
+            }
+            else{
+                this.props.navigation.navigate('Login')
+            }
+        } catch (error) {
+            console.warn("ERROR")
+        }
+    };
+
+    getAdminMessages=()=>{
+        axios.get(baseurl+'/snit/chats/',{
+            headers: {
+                'Content-type': 'multipart/form-data',
+                'Authorization': 'Token '+ this.state.token
+            }
+        })
+        .then(response => {
+            console.log("ADMIN MESAGE",response.data.results)
+            this.setState({cData: response.data.results}, ()=>{
+                this.findDataRead()
+            })
+        })
+        .catch(error => {
+            console.warn(error)
+        });
+    }
+
+   async findDataRead(){
+        var colectedIds = []
+        for(i=0;i<this.state.cData.length;i++){
+            if(this.state.cData[i].read == 0){
+                colectedIds.push(this.state.cData[i].id)
+                // if(colectedIds.length){
+                //     colectedIds.join(","+this.state.cData[i].id)
+                // }else{
+                //     colectedIds.join(this.state.cData[i].id) 
+                // }
+            }
+            // console.warn('OLD ID', colectedIds.join())
+        }
+        this.makeReadData(colectedIds.join())
+    }
+
+    makeReadData=(ids)=>{
+        var formData = new FormData()
+        formData.append('messageids', ids )
+        axios.post(baseurl+'/snit/set-as-read/',formData,{
+            headers: {
+                'Content-type': 'multipart/form-data',
+                'Authorization': 'Token '+ this.state.token
+            }
+        })
+        .then(response => {
+            console.log(response.data)
+        })
+        .catch(error => {
+            console.warn(error.response.data)
+        });
+    }
+
+
+    renderMessages=(item)=>{
+        return(
+            <MessageComp messageData={item.message} />
+        )
+    }
 
   render() {
     return (
@@ -41,29 +130,18 @@ export default class Chat extends Component {
                 </View>
             </View>
 
-            <View style={{justifyContent: 'center', alignItems:'center', }}>
-                <MessageComp messageData={'College will be off due to ramzan for 3 Days, SNIT Management wishes you happy Eid Mubarak'} />
-                <MessageComp messageData={'College will be off due to ramzan for 3 Days, SNIT Management wishes you happy Eid Mubarak'} />
+            <View style={{justifyContent: 'center', alignItems:'center'}}>
+                {/* <MessageComp messageData={'College will be off due to ramzan for 3 Days, SNIT Management wishes you happy Eid Mubarak'} />
+                <MessageComp messageData={'College will be off due to ramzan for 3 Days, SNIT Management wishes you happy Eid Mubarak'} /> */}
+                {this.state.cData.length ? <FlatList
+                        data={this.state.cData}
+                        refreshing={true}
+                        renderItem={({ item }) => 
+                        this.renderMessages(item)
+                    }
+                        keyExtractor={item => item.id.toString()}
+                    /> :  <ActivityIndicator size='large' color='#3A4277' />}
             </View>
-
-            <View style={{height: 40, flexDirection: 'row'}}>
-                <View style={{width: 100, paddingHorizontal: 20, justifyContent: 'center', alignItems:'center'}}>
-                    <Text style={{color: '#3A4277', fontSize: 16, fontFamily: Font.FONT_FAMILY_SEMI}}>Old</Text>
-                </View>
-                <View style={{flex:1, paddingHorizontal: 10, paddingRight: 20}}>
-
-                    <View style={{flex:1, borderBottomWidth: 1, borderColor:'#D9D9D9'}}>
-                    </View>
-                    <View style={{flex:1,  borderTopWidth: 1, borderColor:'#D9D9D9'}}>
-                    </View>
-
-                </View>
-            </View>
-
-            <View style={{justifyContent: 'center', alignItems:'center', }}>
-                <MessageComp messageData={'Hope you are safe, Make sure to use Helpline number in case of any emergency during flood.'} />
-            </View>
-
 
         </View>
         </ScrollView>

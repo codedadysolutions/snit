@@ -28,6 +28,10 @@ target 'snitapp' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'RNSnackbar', :path => '../node_modules/react-native-snackbar'
+
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
+
   target 'snitappTests' do
     inherit! :search_paths
     # Pods for testing

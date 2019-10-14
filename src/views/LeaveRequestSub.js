@@ -13,7 +13,7 @@ import axios from 'axios'
 import Snackbar from 'react-native-snackbar';
 
 
-export default class LeaveRequest extends Component {
+export default class LeaveRequestSub extends Component {
 
     state={
         status: 1,
@@ -27,13 +27,13 @@ export default class LeaveRequest extends Component {
         duration: 'Duration',
         leaveType:'Type of Leave',
         leaveTypeOg: null,
-        p1:{id:0,name:'Period 1'},
-        p2:{id:0,name:'Period 2'},
-        p3:{id:0,name:'Period 3'},
-        p4:{id:0,name:'Period 4'},
-        p5:{id:0,name:'Period 5'},
-        p6:{id:0,name:'Period 6'},
-        p7:{id:0,name:'AssignSub for Extra Duty (Optional)'},
+        p1:{id:0,name:'Assign a Substitute'},
+        // p2:{id:0,name:'Period 2'},
+        // p3:{id:0,name:'Period 3'},
+        // p4:{id:0,name:'Period 4'},
+        // p5:{id:0,name:'Period 5'},
+        // p6:{id:0,name:'Period 6'},
+        // p7:{id:0,name:'AssignSub for Extra Duty (Optional)'},
         reasonText: 'Some other reason',
         loader:false,
         token: ''  ,
@@ -51,13 +51,13 @@ export default class LeaveRequest extends Component {
         this.backHandler = BackHandler.addEventListener('hardwareBackPress', this.handleBackPress);
     }
     componentWillUnmount() {
-      this.backHandler.remove()
-    }
-
-    handleBackPress = () => {
-      this.goBackfn(); // works best when the goBack is async
-      return true;
-    }
+        this.backHandler.remove()
+      }
+  
+      handleBackPress = () => {
+        this.goBackfn(); // works best when the goBack is async
+        return true;
+      }
 
     _retrieveData = async () => {
         try {
@@ -254,189 +254,22 @@ export default class LeaveRequest extends Component {
       onSubmitSecond=()=>{
         this.setState({loader2: true})
         const {selectedPeriodSub}=this.state
-
-        if(this.state.leavefnState == 'half_day'){
-              // if(this.state.selectedPeriodSub.length>2){
-              //     console.warn("HALF DAY")
-                  if(this.state.p1.name=="Period 1"){
-                    Alert.alert(
-                      'Period 1',
-                      'Please make sure that you asigned all substitutes',
-                      [
-                        {text: 'OK', onPress: () => this.setState({loader2: false})},
-                      ],
-                      {cancelable: false},
-                    );
-                  }else if(this.state.p2.name=="Period 2"){
-                    Alert.alert(
-                      'Period 2',
-                      'Please make sure that you asigned all substitutes',
-                      [
-                        {text: 'OK', onPress: () => this.setState({loader2: false})},
-                      ],
-                      {cancelable: false},
-                    );
-                  }
-                  // else if(this.state.p7.name !== "AssignSub for Extra Duty (Optional)"){
-                  //           if(this.state.epname.length<5){
-                  //             Alert.alert(
-                  //               'Extra Duty',
-                  //               'Please Specify extra duty',
-                  //               [
-                  //                 {text: 'OK', onPress: () => this.setState({loader2: false})},
-                  //               ],
-                  //               {cancelable: false},
-                  //             );
-                  //           }
-                  // }
-                  else if(this.state.p3.name == "Period 3"){
-                    Alert.alert(
-                      'Period 3',
-                      'Please make sure that you asigned all substitutes',
-                      [
-                        {text: 'OK', onPress: () => this.setState({loader2: false})},
-                      ],
-                      {cancelable: false},
-                    );
-                  }
-                  else if(this.state.p7.name !== "AssignSub for Extra Duty (Optional)" && this.state.epname.length<5){
-                              Alert.alert(
-                                'Extra Duty',
-                                'Please Specify extra duty',
-                                [
-                                  {text: 'OK', onPress: () => this.setState({loader2: false})},
-                                ],
-                                {cancelable: false},
-                              );
-                  }
-                  else{
-                    const formData2 = new FormData()
-                    this.setState({selectedPeriodSub: selectedPeriodSub.concat({"p1":this.state.p1.id, "p2":this.state.p2.id, "p3":this.state.p3.id, "ep":this.state.p7.id, "ep_name": this.state.epname})},()=>{
-
-                    console.log("data", JSON.stringify(this.state.selectedPeriodSub[0]))
-            
-                    formData2.append('leaveid',parseInt(this.state.leaveid));
-                    formData2.append('data', JSON.stringify(this.state.selectedPeriodSub[0]))
-            
-            
-                    axios.post(baseurl+"/leave/add-substitutions/",formData2,{
-                      headers: {
-                          'Content-type': 'multipart/form-data',
-                          'Authorization': 'Token '+ this.state.token
-                      }
-                      })
-                      .then(response => {
-                          console.log(response.data)
-                          this.setState({loader2: false},()=>{
-                              if(response.data.Status==true){
-                                Alert.alert(
-                                  'Leave Submited',
-                                  'Your leave form has been submited',
-                                  [
-                                    {text: 'OK', onPress: () => this.props.navigation.navigate('Home')},
-                                  ],
-                                  {cancelable: false},
-                                );
-                              }
-                          })
-                          
-
-                      })
-                      .catch(error => {
-                          console.warn(error.response)
-                          this.setState({loader2: false}, ()=>{
-                            Alert.alert(
-                              'Error',
-                              'Something went wrong, please try again',
-                              [
-                                {text: 'Retry', onPress: () => console.log('Retry')},
-                              ],
-                              {cancelable: false},
-                            );
-                          })
-                      });
-                    })
-                  }
-        }else{
-          // if(this.state.selectedPeriodSub.length>5){
-          //       console.warn("FULL DAY")
-                if(this.state.p1.name=="Period 1"){
+                if(this.state.p1.name=="Assign a Substitute"){
                   Alert.alert(
-                    'Period 1',
-                    'Please make sure that you asigned all substitutes',
+                    'Assign a Substitute',
+                    'Please make sure that you asig substitute',
                     [
                       {text: 'OK', onPress: () => this.setState({loader2: false})},
                     ],
                     {cancelable: false},
                   );
                 }
-               else if(this.state.p2.name=="Period 2"){
-                  Alert.alert(
-                    'Period 2',
-                    'Please make sure that you asigned all substitutes',
-                    [
-                      {text: 'OK', onPress: () => this.setState({loader2: false})},
-                    ],
-                    {cancelable: false},
-                  );
-                }
-                else if(this.state.p3.name=="Period 3"){
-                  Alert.alert(
-                    'Period 3',
-                    'Please make sure that you asigned all substitutes',
-                    [
-                      {text: 'OK', onPress: () => this.setState({loader2: false})},
-                    ],
-                    {cancelable: false},
-                  );
-                }
-               else if(this.state.p4.name=="Period 4"){
-                  Alert.alert(
-                    'Period 4',
-                    'Please make sure that you asigned all substitutes',
-                    [
-                      {text: 'OK', onPress: () => this.setState({loader2: false})},
-                    ],
-                    {cancelable: false},
-                  );
-                }
-                else if(this.state.p5.name=="Period 5"){
-                  Alert.alert(
-                    'Period 5',
-                    'Please make sure that you asigned all substitutes',
-                    [
-                      {text: 'OK', onPress: () => this.setState({loader2: false})},
-                    ],
-                    {cancelable: false},
-                  );
-                }
-                else if(this.state.p6.name=="Period 6"){
-                  Alert.alert(
-                    'Period 6',
-                    'Please make sure that you asigned all substitutes',
-                    [
-                      {text: 'OK', onPress: () => this.setState({loader2: false})},
-                    ],
-                    {cancelable: false},
-                  );
-                }
-                else if(this.state.p7.name !== "AssignSub for Extra Duty (Optional)" && this.state.epname.length<5){
-                    Alert.alert(
-                      'Extra Duty',
-                      'Please Specify extra duty',
-                      [
-                        {text: 'OK', onPress: () => this.setState({loader2: false})},
-                      ],
-                      {cancelable: false},
-                    );
-              }
-
               else{
                   const formData2 = new FormData()
                   // const obj = this.state.selectedPeriodSub.reduce(function(result, current) {
                   //   return Object.assign(result, current);
                   // }, {})
-                  this.setState({selectedPeriodSub: selectedPeriodSub.concat({"p1":this.state.p1.id, "p2":this.state.p2.id, "p3":this.state.p3.id, "p4":this.state.p4.id, "p5":this.state.p5.id, "p6":this.state.p6.id, "ep":this.state.p7.id, "ep_name": this.state.epname})},()=>{
+                  this.setState({selectedPeriodSub: selectedPeriodSub.concat({"p1":this.state.p1.id, "ep":0, "ep_name": ''})},()=>{
           
                   formData2.append('leaveid',parseInt(this.state.leaveid));
                   formData2.append('data', JSON.stringify(this.state.selectedPeriodSub[0]))
@@ -480,7 +313,6 @@ export default class LeaveRequest extends Component {
                   })
                 }
         }
-    }
 
     onPressPeriod=(key)=>{
         this.setState({currentPressedPeriod: key}, ()=>{
@@ -488,22 +320,6 @@ export default class LeaveRequest extends Component {
       })
     }
 
-    testFun=(item, val)=>{
-      const {selectedPeriodSub}=this.state
-      console.warn("ONFN",selectedPeriodSub)
-      for(i=0;i<selectedPeriodSub.length;i++){
-          if(selectedPeriodSub[i][val]){
-            console.warn("ONTRUE",selectedPeriodSub)
-            var x = selectedPeriodSub.splice(i,1);
-            x = selectedPeriodSub.concat({val: item.name}, ()=>{
-            this.setState({selectedPeriodSub: x})
-            })
-          }else{
-            console.warn("ONFALSE",selectedPeriodSub)
-            this.setState({selectedPeriodSub: selectedPeriodSub.concat({val: item.name})})
-          }
-      }
-    }
 
 
 
@@ -516,24 +332,24 @@ export default class LeaveRequest extends Component {
                 this.setState({p1: item}, ()=>this.toggleModal3())
                 break;
 
-        case 2: {return(
-          this.setState({p2: item},()=>this.toggleModal3())
-        )}
-        case 3:{ return(
-          this.setState({p3: item},()=>this.toggleModal3())
-        )}
-        case 4: {return(
-          this.setState({p4: item},()=>this.toggleModal3())
-        )}
-        case 5: {return(
-          this.setState({p5: item},()=>this.toggleModal3())
-        )}
-        case 6: {return(
-          this.setState({p6: item},()=>this.toggleModal3())
-        )}
-        case 7: {return(
-          this.setState({p7: item},()=>this.toggleModal3())
-        )}
+        // case 2: {return(
+        //   this.setState({p2: item},()=>this.toggleModal3())
+        // )}
+        // case 3:{ return(
+        //   this.setState({p3: item},()=>this.toggleModal3())
+        // )}
+        // case 4: {return(
+        //   this.setState({p4: item},()=>this.toggleModal3())
+        // )}
+        // case 5: {return(
+        //   this.setState({p5: item},()=>this.toggleModal3())
+        // )}
+        // case 6: {return(
+        //   this.setState({p6: item},()=>this.toggleModal3())
+        // )}
+        // case 7: {return(
+        //   this.setState({p7: item},()=>this.toggleModal3())
+        // )}
       }
     }
     
@@ -629,60 +445,10 @@ export default class LeaveRequest extends Component {
                                         <Icon name='arrow-back' size={15} color='#3A4277'/>
                                     </View>
                                 </TouchableOpacity>
-                                <TouchableOpacity onPress={()=>this.onPressPeriod(2)} style={{flex:1, marginHorizontal: 10, backgroundColor: 'white', flexDirection: "row"}}>
-                                     <View style={{flex:1, justifyContent:'center', alignItems: 'center'}}>
-                                        <Text style={{color: '#3A3A3A', fontSize: 13, fontFamily: Font.FONT_FAMILY_SEMI}}>{this.state.p2.name}</Text>
-                                     </View>
-                                     <View style={{width: 30, justifyContent: 'center', alignItems: 'center'}}>
-                                        <Icon name='arrow-back' size={15} color='#3A4277'/>
-                                    </View>
-                                </TouchableOpacity>
                         </View>
                   </View>
 
-                  <View style={{height: 60, justifyContent: 'center', marginTop: 10}}>
-                        <View style={{height: 40, flexDirection: 'row'}}>
-                                <TouchableOpacity onPress={()=>this.onPressPeriod(3)} style={{flex:1, marginHorizontal: 10, backgroundColor: 'white', flexDirection: "row"}}>
-                                    <View style={{flex:1, justifyContent:'center', alignItems: 'center'}}>
-                                        <Text style={{color: '#3A3A3A', fontSize: 13, fontFamily: Font.FONT_FAMILY_SEMI}}>{this.state.p3.name}</Text>
-                                    </View>
-                                    <View style={{width: 30, justifyContent: 'center', alignItems: 'center'}}>
-                                        <Icon name='arrow-back' size={15} color='#3A4277'/>
-                                    </View>
-                                </TouchableOpacity>
-                                {this.state.leavefnState != 'half_day' && <TouchableOpacity onPress={()=>this.onPressPeriod(4)} style={{flex:1, marginHorizontal: 10, backgroundColor: 'white', flexDirection: "row"}}>
-                                     <View style={{flex:1, justifyContent:'center', alignItems: 'center'}}>
-                                        <Text style={{color: '#3A3A3A', fontSize: 13, fontFamily: Font.FONT_FAMILY_SEMI}}>{this.state.p4.name}</Text>
-                                     </View>
-                                     <View style={{width: 30, justifyContent: 'center', alignItems: 'center'}}>
-                                        <Icon name='arrow-back' size={15} color='#3A4277'/>
-                                    </View>
-                                </TouchableOpacity>}
-                        </View>
-                  </View>
-
-                  {this.state.leavefnState != 'half_day' &&<View style={{height: 60, justifyContent: 'center', marginTop: 10}}>
-                        <View style={{height: 40, flexDirection: 'row'}}>
-                                <TouchableOpacity onPress={()=>this.onPressPeriod(5)} style={{flex:1, marginHorizontal: 10, backgroundColor: 'white', flexDirection: "row"}}>
-                                    <View style={{flex:1, justifyContent:'center', alignItems: 'center'}}>
-                                        <Text style={{color: '#3A3A3A', fontSize: 13, fontFamily: Font.FONT_FAMILY_SEMI}}>{this.state.p5.name}</Text>
-                                    </View>
-                                    <View style={{width: 30, justifyContent: 'center', alignItems: 'center'}}>
-                                        <Icon name='arrow-back' size={15} color='#3A4277'/>
-                                    </View>
-                                </TouchableOpacity>
-                                <TouchableOpacity onPress={()=>this.onPressPeriod(6)} style={{flex:1, marginHorizontal: 10, backgroundColor: 'white', flexDirection: "row"}}>
-                                     <View style={{flex:1, justifyContent:'center', alignItems: 'center'}}>
-                                        <Text style={{color: '#3A3A3A', fontSize: 13, fontFamily: Font.FONT_FAMILY_SEMI}}>{this.state.p6.name}</Text>
-                                     </View>
-                                     <View style={{width: 30, justifyContent: 'center', alignItems: 'center'}}>
-                                        <Icon name='arrow-back' size={15} color='#3A4277'/>
-                                    </View>
-                                </TouchableOpacity>
-                        </View>
-                  </View>}
-
-                  <View style={{height: 30, justifyContent:'center', paddingHorizontal: 10}}>
+                  {/* <View style={{height: 30, justifyContent:'center', paddingHorizontal: 10}}>
                         <Text style={{color: '#3A4277', fontSize: 13, fontFamily: Font.FONT_FAMILY_SEMI}}>Extra Duty</Text>
                   </View>
 
@@ -703,7 +469,7 @@ export default class LeaveRequest extends Component {
                       <View style={{width: 50, justifyContent: 'center', alignItems: 'center'}}>
                           <Icon2 name='arrow-down-drop-circle' size={25} color='#3A3A3A' />
                       </View>
-                  </TouchableOpacity>
+                  </TouchableOpacity> */}
 
                   <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
                     <TouchableOpacity disabled={this.state.loader2} onPress={()=>this.onSubmitSecond()} style={{height: 40, width: 120, justifyContent: 'center', alignItems: 'center', borderWidth: 2, borderColor: '#3A4277', borderRadius: 20 }}>
@@ -719,7 +485,7 @@ export default class LeaveRequest extends Component {
         }
     }
 
-   async goBackfn(){
+    async goBackfn(){
         // this.props.navigation.goBack()
         if(this.state.status == 2){
             Alert.alert(
